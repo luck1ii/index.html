@@ -1,0 +1,101 @@
+:root {
+  --primary-color: #00CED1; 
+  --secondary-color: #FF6B9E;
+  --background-dark: #0A0A1A;
+  --text-color: #E0E0FF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  background: var(--background-dark);
+  color: var(--text-color);
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1000px;
+  cursor: none;
+}
+
+
+.custom-cursor {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background: url('assets/custom_cursor.png') no-repeat center center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.1s ease-out;
+  filter: hue-rotate(var(--cursor-hue, 0deg)); 
+}
+
+
+body.home-theme {
+  --primary-gradient: from-purple-400;
+  --secondary-gradient: to-pink-600;
+  --primary-color: #00CED1; 
+  --secondary-color: #FF6B9E;
+  --cursor-hue: 180deg; 
+}
+
+body.hacker-theme {
+  --primary-gradient: from-green-500;
+  --secondary-gradient: to-teal-600;
+  --primary-color: #22C55E; 
+  --secondary-color: #2DD4BF;
+  --cursor-hue: 120deg; 
+}
+
+body.rain-theme {
+  --primary-gradient: from-blue-800;
+  --secondary-gradient: to-blue-600;
+  --primary-color: #1E3A8A; 
+  --secondary-color: #2563EB;
+  --cursor-hue: 240deg; 
+}
+
+body.anime-theme {
+  --primary-gradient: from-red-600;
+  --secondary-gradient: to-red-400;
+  --primary-color: #DC2626; 
+  --secondary-color: #F87171;
+  --cursor-hue: 0deg; 
+}
+
+body.car-theme {
+  --primary-gradient: from-yellow-500;
+  --secondary-gradient: to-yellow-300;
+  --primary-color: #EAB308; 
+  --secondary-color: #FACC15;
+  --cursor-hue: 60deg; 
+}
+
+
+.video-background {
+  transform: scale(1.02);
+}
+
+
+#hacker-overlay {
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+#snow-overlay {
+  z-index: 15;
+  opacity: 0.8;
+}
+
+
+.glitch-overlay {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+... (675 lines left)
